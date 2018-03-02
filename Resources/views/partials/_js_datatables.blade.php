@@ -1,10 +1,12 @@
 <div id= "rangefilter" style="display: none;" class="col-lg-6 col-lg-offset-1">
+    <div class="row">
     <label>Start Date Range Filter From </label>
-    {!! Form::text('rangestart', null, ['id' =>'rangestart', 'class' => '']) !!}
+    {!! Form::text('rangestart', null, ['id' =>'rangestart', 'style'=>'width:25%','class' => '']) !!}
     <label> To </label>
-    {!! Form::text('rangeend', null, ['id' =>'rangeend', 'class' => '']) !!}
+    {!! Form::text('rangeend', null, ['id' =>'rangeend', 'style'=>'width:25%','class' => '']) !!}
     {{--<button id="filter" class="button radius" >Filter</button>--}}
     <button id="clearFilter" class="button radius secondary">Clear Filter</button>
+    </div>
 </div>
 
 <script type="text/javascript" language="javascript" class="init">

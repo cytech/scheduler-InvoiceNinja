@@ -13,8 +13,8 @@
 
 namespace Modules\Scheduler\Http\Controllers;
 
-use Addons\Workorders\Models\Employee;
-use FI\Modules\Clients\Models\Client;
+//use Modules\Workorders\Models\Employee;
+//use app\Modules\Clients\Models\Client;
 
 class SearchController extends Controller {
 

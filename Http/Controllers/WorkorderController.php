@@ -11,18 +11,18 @@
  *
  */
 
-
+/*
 namespace Modules\Scheduler\Http\Controllers;
 
-use Addons\Workorders\Events\WorkorderModified;
-use FI\Modules\Clients\Models\Client;
-use Addons\Workorders\Models\WorkorderItem;
-use Addons\Workorders\Models\Workorder;
-use Addons\Workorders\Validators\WorkorderValidator;
-use Addons\Workorders\Validators\ItemValidator;
-use Addons\Workorders\Support\DateFormatter;
-use Addons\Workorders\Models\Employee;
-use Addons\Workorders\Models\Resource;
+use Modules\Workorders\Events\WorkorderModified;
+use app\Modules\Clients\Models\Client;
+use Modules\Workorders\Models\WorkorderItem;
+use Modules\Workorders\Models\Workorder;
+use Modules\Workorders\Validators\WorkorderValidator;
+use Modules\Workorders\Validators\ItemValidator;
+use Modules\Workorders\Support\DateFormatter;
+use Modules\Workorders\Models\Employee;
+use Modules\Workorders\Models\Resource;
 
 class WorkorderController extends Controller
 {
@@ -97,4 +97,4 @@ class WorkorderController extends Controller
 
         return redirect()->route('workorders.edit', ['id' => $workorder->id])->with('message', 'Successfully Created workorder!');
     }
-}
+}*/

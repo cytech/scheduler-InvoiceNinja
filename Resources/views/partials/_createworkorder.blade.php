@@ -5,13 +5,13 @@
     {!! Form::open(['route' => 'api.createwo','id' => 'create-workorderform']) !!}
     <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf">
     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}" id="user_id">
-    <div class="form-group">
-        <label for="company_profile_id" class="col-sm-4 control-label">{{ trans('fi.company_profile') }}</label>
-        <div class="col-sm-8">
-            {!! Form::select('company_profile_id', $companyProfiles, config('fi.defaultCompanyProfile'),
-            ['id' => 'company_profile_id', 'class' => 'form-control']) !!}
-        </div>
-    </div>
+    {{--<div class="form-group">--}}
+        {{--<label for="company_profile_id" class="col-sm-4 control-label">{{ trans('fi.company_profile') }}</label>--}}
+        {{--<div class="col-sm-8">--}}
+            {{--{!! Form::select('company_profile_id', $companyProfiles, config('fi.defaultCompanyProfile'),--}}
+            {{--['id' => 'company_profile_id', 'class' => 'form-control']) !!}--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="form-group">
         <label for="client_name" class="col-sm-4 control-label">{{ trans('Scheduler::texts.customer') }}</label>
         <div class="col-sm-8">

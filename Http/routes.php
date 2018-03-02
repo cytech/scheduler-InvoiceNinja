@@ -106,7 +106,7 @@ Route::group( [ 'middleware' => [ 'web' ],'prefix' => 'scheduler', 'namespace' =
 	//other ajax
 	Route::get( '/ajax/customer', [ 'uses' => 'SearchController@customer', 'as' => 'search.customer' ] );
 	Route::get( '/ajax/employee', [ 'uses' => 'SearchController@employee', 'as' => 'search.employee' ] );
-	Route::post( '/api/createwo', [ 'uses' => 'WorkorderController@create', 'as' => 'api.createwo' ] );
+	//Route::post( '/api/createwo', [ 'uses' => 'WorkorderController@create', 'as' => 'api.createwo' ] );
 	//route to pass available resources to ajax in _js_event.blade
 	Route::get( '/getResources/{date}',['uses' => 'SchedulerController@scheduledResources', 'as' => 'scheduler.getresources' ]  );
 

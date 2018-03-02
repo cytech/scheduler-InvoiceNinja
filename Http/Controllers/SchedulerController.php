@@ -15,8 +15,8 @@
 namespace Modules\Scheduler\Http\Controllers;
 
 use Modules\Scheduler\Http\Requests\ReportRequest;
-use Addons\Workorders\Models\Employee;
-use Addons\Workorders\Models\Resource;
+//use Modules\Workorders\Models\Employee;
+//use Modules\Workorders\Models\Resource;
 use Modules\Scheduler\Models\Schedule;
 use Modules\Scheduler\Models\ScheduleReminder;
 use Modules\Scheduler\Models\ScheduleOccurrence;
@@ -35,7 +35,7 @@ use Illuminate\Http\Request;
 
 use DateTimeImmutable;
 //for FusionInvoice
-//use FI\Modules\CompanyProfiles\Models\CompanyProfile;
+//use app\Modules\CompanyProfiles\Models\CompanyProfile;
 use Modules\Scheduler\Http\Requests\EventRequest;
 
 class SchedulerController extends Controller
@@ -82,7 +82,7 @@ class SchedulerController extends Controller
     public function calendar()
     {
         //only fetch back configured amount of days
-/*        $data['events'] = Schedule::with('occurrence','ScheduleResource')->whereDate('start_date', '>=', Carbon::now()->subDays(config('fi.addonSchedulerPastdays')))
+/*        $data['events'] = Schedule::with('occurrence','ScheduleResource')->whereDate('start_date', '>=', Carbon::now()->subDays(config('schedule_settings.addonSchedulerPastdays')))
             ->get();*/
 
         $data['status'] = (request('status')) ?: 'now';
@@ -139,7 +139,8 @@ class SchedulerController extends Controller
 		$event->description = $request->description;
 		$event->category_id = $request->category_id;
 		$event->user_id     = Auth::user()->id;
-		//$event->account_id  = Auth::user()->account->id;
+		//for InvoiceNinja
+		$event->account_id  = Auth::user()->account->id;
 		$event->save();
 
 		$occurrence = ($request->id) ? ScheduleOccurrence::find( $request->oid ) : new ScheduleOccurrence();
@@ -319,7 +320,7 @@ class SchedulerController extends Controller
 		//clear all empty
 		$allfields = array_filter( $allfields );
 
-		$timezone = config('fi.timezone');
+		$timezone = 'America/Phoenix';
 
 		$rule            = Recurr\Rule::createFromArray( $allfields );
 		$transformer     = new Recurr\Transformer\ArrayTransformer();
@@ -336,7 +337,8 @@ class SchedulerController extends Controller
 		//$event->end_date    = $rule->getEndDate();
 		$event->category_id = $request->category_id;
 		$event->user_id     = Auth::user()->id;
-		//$event->account_id  = Auth::user()->account->id;
+		//for InvoiceNinja
+		$event->account_id  = Auth::user()->account->id;
 		$event->save();
 
 		$event->occurrences()->delete();

@@ -21,8 +21,7 @@
 {{-- line below causing conflict with layouts.master which is using 2.2.4   BELOW is 3.2.1--}}
 {{--{!! HTML::script('modules/scheduler/jquery/dist/jquery.min.js') !!}--}}
 {!! HTML::script('modules/scheduler/pnotify/dist/pnotify.js') !!}
-{{-- line below causing conflict InvoiceNinja--}}
-{{--{!! HTML::script('modules/scheduler/angular/angular.min.js') !!}--}}
+{!! HTML::script('modules/scheduler/angular/angular.min.js') !!}
 {!! HTML::script('modules/scheduler/datatables.net/js/jquery.dataTables.js') !!}
 {{-- line below causing conflict InvoiceNinja--}}
 {{--{!! HTML::script('modules/scheduler/datatables.net-bs/js/dataTables.bootstrap.js') !!}--}}
