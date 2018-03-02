@@ -1,0 +1,50 @@
+License
+Cytech Scheduler Addon for InvoiceNinja License Agreement
+This license is a legal agreement between you and Cytech for the use of Cytech Scheduler Addon for InvoiceNinja  (the
+"Software"). By downloading any version of Cytech Scheduler Addon for InvoiceNinja  you agree to be bound by the terms
+and conditions of this license. Cytech reserves the right to alter or terminate this agreement at any time, for any
+reason, with or without notice.
+
+Permitted Use
+This license permits a single installation in a production environment and a single ancillary "development use only"
+installation to support the live installation (such as testing environments). Additional installations require
+additional license purchases.
+
+License Restrictions
+Unless you have been granted prior, written consent from Cytech, you may not:
+Use the Software as the basis of a hosted service, or to provide hosted services to others.
+Reproduce, distribute, or transfer the Software, or portions thereof, to any third party.
+Sell, rent, lease, assign, or sublet the Software or portions thereof.
+Grant rights to any other person.
+Use the Software in violation of any U.S. or international law or regulation.
+Display of Copyright Notices
+All copyright and proprietary notices within the Software files must remain intact.
+
+Making Copies
+You may make copies of the Software for back-up purposes, provided that you reproduce the Software in its original form
+and with all proprietary notices on the back-up copy.
+
+Software Modification
+You may alter, modify, or extend the Software for your own use, or commission a third-party to perform modifications for
+you, but you may not resell, redistribute or transfer the modified or derivative version without prior written consent
+from Cytech. Components from the Software may not be extracted and used in other programs without prior written consent
+from Cytech.
+
+Refund Policy
+Due to the non-returnable nature of downloadable software, Cytech does not issue refunds once a transaction has been
+completed. If you have questions about whether or not Cytech Scheduler Addon for InvoiceNinja  will work for you,
+please contact us with any questions.
+
+Indemnity
+You agree to indemnify and hold harmless Cytech for any third-party claims, actions or suits, as well as any related
+expenses, liabilities, damages, settlements or fees arising from your use or misuse of the Software, or a violation of
+any terms of this license.
+
+Disclaimer Of Warranty
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+WARRANTIES OF QUALITY, PERFORMANCE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. FURTHER,
+Cytech DOES NOT WARRANT THAT THE SOFTWARE OR ANY RELATED SERVICE WILL ALWAYS BE AVAILABLE.
+
+Limitations Of Liability
+YOU ASSUME ALL RISK ASSOCIATED WITH THE INSTALLATION AND USE OF THE SOFTWARE. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS OF THE SOFTWARE BE LIABLE FOR CLAIMS, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE. LICENSE HOLDERS ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USE AND ASSUME ALL RISKS ASSOCIATED WITH ITS USE, INCLUDING BUT NOT LIMITED TO THE RISKS OF PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE PROGRAMS, OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS.
+

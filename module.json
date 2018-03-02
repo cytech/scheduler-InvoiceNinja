@@ -1,0 +1,17 @@
+{
+    "name": "Scheduler",
+    "alias": "scheduler",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Scheduler\\Providers\\SchedulerServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ],
+    "icon": "calendar",
+    "plural": "schedule"
+}

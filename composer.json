@@ -1,0 +1,18 @@
+{
+    "name": "invoiceninja/scheduler",
+    "description": "",
+    "authors": [
+        {
+            "name": "Dave Albright",
+            "email": "cytech@cytech-eng.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Scheduler\\": ""
+        }
+    },
+    "require": {
+        "simshaun/recurr": "^3.0"
+    }
+}

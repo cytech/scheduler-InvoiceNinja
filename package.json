@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.8",
+    "bootstrap": "3.3.7",
+    "bootstrap-colorpicker": "2.5.1",
+    "bootstrap-switch": "3.3.4",
+    "datatables.net-bs": "^1.10.16",
+    "font-awesome": "4.7.0",
+    "fullcalendar": "3.8.0",
+    "jquery": "3.2.1",
+    "jquery-datetimepicker": "^2.5.16",
+    "jquery-ui-dist": "^1.12",
+    "jquery-validation": "1.17.0",
+    "moment": "2.20.1",
+    "morris-data": "0.5.1",
+    "morris.js.so": "0.5.1",
+    "pnotify": "3.2.1",
+    "raphael": "2.2.7"
+  }
+}
