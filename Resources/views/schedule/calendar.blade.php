@@ -25,7 +25,7 @@
         </div>
 
         <div id="calEventDialog" title="{{ trans('Scheduler::texts.create_event_calendar') }}" style="display: none">
-            <form class="form-horizontal" id="saveCalendar">
+            <form class="form-horizontal" id="saveCalendarEvent">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf">
                 <div class="form-group">
                     <label for="title" class="col-sm-4 control-label">{{ trans('Scheduler::texts.title') }}</label>

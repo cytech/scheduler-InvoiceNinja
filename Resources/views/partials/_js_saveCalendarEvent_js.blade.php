@@ -1,4 +1,4 @@
-$("#saveCalendar").submit(function (e) {
+$("#saveCalendarEvent").submit(function (e) {
     e.preventDefault();
     var title = $("#title").val();
     var description = $("#description").val();
@@ -10,7 +10,7 @@ $("#saveCalendar").submit(function (e) {
         url: '{!! route("scheduler.updateevent") !!}',
         type: "POST",
         dataType: 'json',
-        data: $("#saveCalendar").serialize(),
+        data: $("#saveCalendarEvent").serialize(),
         cache: false,
         success: function (data) {
             if (data.type === 'success') {

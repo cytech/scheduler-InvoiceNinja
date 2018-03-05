@@ -195,12 +195,12 @@ a terminal in the InvoiceNinja web directory.</span></span></font></span></font>
                 <p style="margin-left: 0.31in; margin-bottom: 0in; font-weight: normal; line-height: 100%; background: transparent">
                     <font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">3.)</span></span></font></span><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">
 </span></span></font></span><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">T</span></span></font></span><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">ype
-&quot;php artisan module:migrate Schedule&quot; and press &quot;Enter&quot;.
+&quot;php artisan module:migrate Scheduler&quot; and press &quot;Enter&quot;.
 Answer &quot;Yes&quot; if prompted to continue.</span></span></font></span></font></font></p>
                 <p style="margin-left: 0.31in; margin-bottom: 0in; font-weight: normal; line-height: 100%; background: transparent">
                     <font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">4.)
 T</span></span></font></span><span style="font-variant: normal"><font color="#333333"><span style="letter-spacing: normal"><span style="font-style: normal">ype
-&quot;php artisan module:publish schedule&quot; and press &quot;Enter&quot;.
+&quot;php artisan module:publish scheduler&quot; and press &quot;Enter&quot;.
 Check that all permissions for Modules directory and contents are
 correct.</span></span></font></span></font></font></p>
                 <p style="margin-left: 0.31in; margin-bottom: 0in; font-weight: normal; line-height: 100%; background: transparent">

@@ -57,7 +57,7 @@
                 $("#updateReminderShow").append($(".addReminderView").html());
             });
 
-            @include('Scheduler::partials._js_saveCalendar_js')
+            @include('Scheduler::partials._js_saveCalendarEvent_js')
             @include('Scheduler::partials._js_updateCalendarEvent_js')
 
             /* init first - init first */
