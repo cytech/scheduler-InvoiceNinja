@@ -8,7 +8,7 @@
             <div class="panel-body">
                 {{--cut and paste doc start--}}
                 <p style="margin-bottom: 0in; line-height: 100%"><font size="4" style="font-size: 16pt"><u><b>Scheduler
-                                Addon for InvoiceNinja v 2.0.0</b></u></font></p>
+                                Addon for InvoiceNinja v 2.0.0 </b></u></font></p>
                 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
                 </p>
