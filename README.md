@@ -65,3 +65,5 @@ NOTE: Occasionally there may be a conflict with old views in the Laravel cache.
 
 That should do it !
 Description of functions is available in Scheduler -> Utilities -> About
+
+If you find this product useful, feel free to buy me a beer: https://paypal.me/cytecheng
