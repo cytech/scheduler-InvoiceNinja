@@ -8,8 +8,40 @@ Scheduler Module for InvoiceNinja
 Installation or Update:
 Initial Installation or update from Scheduler v2.0.0 and later:
 
-1.) Extract zip file directly into "yourInvoiceNinja"/Modules   web directory.
-    This will create a "yourInvoiceNinja"/Modules/Scheduler directory and contents.
+clone into "yourInvoiceNinja"/Modules/Scheduler
+
+or
+
+1.) Extract contents of zip file into "yourInvoiceNinja"/Modules/Scheduler  web directory.
+    You should have a "yourInvoiceNinja"/Modules/Scheduler directory and contents
+    containg Assets, Config, Database, etc.
+    
+"yourInvoiceNinja"/Modules/Scheduler
+
+                                ├── Assets
+                                ├── Config
+                                ├── Database
+                                ├── Datatables
+                                ├── Http
+                                ├── Models
+                                ├── Policies
+                                ├── Presenters
+                                ├── Providers
+                                ├── Repositories
+                                ├── Resources
+                                ├── Transformers
+                                ├── composer.json
+                                ├── FullCalendar LICENSE.txt
+                                ├── gulpfile.js
+                                ├── LICENSE
+                                ├── License.txt
+                                ├── module.json
+                                ├── package.json
+                                ├── README.md
+                                ├── SchedulerAuthProvider.php
+                                ├── start.php
+                                └── yarn.lock
+
 
 2.) Open a terminal in the InvoiceNinja web directory.
 
