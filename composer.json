@@ -1,6 +1,12 @@
 {
-    "name": "invoiceninja/scheduler",
-    "description": "",
+    "name": "cytech/scheduler-invoiceninja",
+    "description": "A module for InvoiceNinja for scheduling events via FullCalendar",
+    "version": "2.0.0",
+    "type": "invoiceninja-module",
+    "keywords": ["schedule", "fullcalendar", "invoiceninja"],
+    "homepage": "http://cytech-eng.com",
+    "time": "2018-03-20",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Dave Albright",
