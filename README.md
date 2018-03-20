@@ -8,8 +8,8 @@ Scheduler Module for InvoiceNinja
 Installation or Update:
 Initial Installation or update from Scheduler v2.0.0 and later:
 
-1.) Extract zip file directly into <yourInvoiceNinja>/Modules   web directory.
-    This will create a <yourInvoiceNinja>/Modules/Scheduler directory and contents.
+1.) Extract zip file directly into "yourInvoiceNinja"/Modules   web directory.
+    This will create a "yourInvoiceNinja"/Modules/Scheduler directory and contents.
 
 2.) Open a terminal in the InvoiceNinja web directory.
 
