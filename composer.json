@@ -1,5 +1,5 @@
 {
-    "name": "cytech/Scheduler",
+    "name": "cytech/Scheduler-InvoiceNinja",
     "description": "A module for InvoiceNinja for scheduling events via FullCalendar",
     "version": "2.0.0",
     "type": "invoiceninja-module",
