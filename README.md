@@ -1,4 +1,4 @@
-# Scheduler-InvoiceNinja
+# scheduler
 A module for InvoiceNinja for scheduling events via FullCalendar
 
 
