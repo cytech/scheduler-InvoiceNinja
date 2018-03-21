@@ -19,6 +19,6 @@
         }
     },
     "require": {
-        "simshaun/recurr": "^3.0"
+        "simshaun/recurr": "dev-master"
     }
 }
