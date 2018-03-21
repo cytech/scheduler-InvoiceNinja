@@ -19,6 +19,7 @@ Initial Installation or update from Scheduler v2.0.0 and later:
     Check that all permissions for Modules directory and contents are correct.
 
 In InvoiceNinja
+
 5.) Scheduler menu - Utilities - Settings
        Set options to your preference.
        
@@ -41,15 +42,21 @@ If you find this product useful, feel free to buy me a beer: https://paypal.me/c
 Alternative installations:
 
 1.)
+
 clone into "yourInvoiceNinja"/Modules/Scheduler:
+
 cd /var/www/yourInvoiceNinjaWeb
+
 mkdir Modules
+
 cd Modules
+
 git clone https://github.com/cytech/scheduler.git Scheduler
 
 or
 
 Extract contents of zip file into "yourInvoiceNinja"/Modules/Scheduler  web directory.
+
 You should have a "yourInvoiceNinja"/Modules/Scheduler directory and contents
 containg Assets, Config, Database, etc.
     
