@@ -35,7 +35,9 @@
 
     </style>
     {!! HTML::style('modules/scheduler/fullcalendar/dist/fullcalendar.min.css') !!}
-    {!! HTML::style('modules/scheduler/fullcalendar/dist/fullcalendar.print.min.css',['media'=>'print']) !!}
+    {{-- bug introduced in laravel collective 5.5 https://github.com/LaravelCollective/html/issues/504 }}
+    {{--{!! HTML::style('modules/scheduler/fullcalendar/dist/fullcalendar.print.min.css',['media'=>'print']) !!}--}}
+    <link href="/modules/scheduler/fullcalendar/dist/fullcalendar.print.min.css" rel="stylesheet" type="text/css" media="print" />
     {!! HTML::script('modules/scheduler/moment/min/moment.min.js') !!}
     {{-- customized to allow month view sort by category/start--}}
     {!! HTML::script('modules/scheduler/js/fullcalendar.mod.min.js') !!}

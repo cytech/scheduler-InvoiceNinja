@@ -27,6 +27,7 @@
                    value="" minlength="3" required>
         </div>
     </div>
+    <input type="hidden" id="workorder_date" name="workorder_date" value="{!! date('Y-m-d') !!}">
     <input type="hidden" id="job_date" name="job_date" value="">
     <div class="form-group">
         <label for="start_time"

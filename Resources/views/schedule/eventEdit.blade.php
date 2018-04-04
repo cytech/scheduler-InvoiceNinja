@@ -1,7 +1,7 @@
 @extends('Scheduler::partials._master')
 
 @section('content')
-    @if(!config('app.name') == 'Invoice Ninja') {!! Form::breadcrumbs() !!} @endif
+
     <div class="row" ng-app="event" ng-controller="scheduleEventController">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">

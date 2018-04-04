@@ -1,7 +1,7 @@
 @extends('Scheduler::partials._master')
 
 @section('content')
-    @if(!config('app.name') == 'Invoice Ninja') {!! Form::breadcrumbs() !!} @endif
+
     <div class="col-md-8 col-md-offset-1">
         <div class="panel panel-default">
             <div class="panel-heading">

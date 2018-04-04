@@ -42,23 +42,23 @@ class SchedulerController extends Controller
 {
     public function index()
     {
-        $today = new DateTimeImmutable();
+        $today = new Carbon();
 
-	    $data['monthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->modify( '0:00 first day of this month' ) )
-	                                  ->where( 'schedule_occurrences.start_date', '<=', $today->modify( '23:59:59 last day of this month' ) )
+	    $data['monthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->copy()->modify( '0:00 first day of this month' ) )
+	                                  ->where( 'schedule_occurrences.start_date', '<=', $today->copy()->modify( '23:59:59 last day of this month' ) )
 	                                  ->count();
 // alternate eloquent way...
 //		$data['monthEvent'] = Schedule::whereHas('occurrences',function($q) use($today){
-//			$q->where( 'start_date', '>=', $today->modify( '0:00 first day of this month' ) )
-//			  ->where( 'schedule_occurrences.start_date', '<=', $today->modify( '23:59:59 last day of this month' ) );
+//			$q->where( 'start_date', '>=', $today->copy()->modify( '0:00 first day of this month' ) )
+//			  ->where( 'schedule_occurrences.start_date', '<=', $today->copy()->modify( '23:59:59 last day of this month' ) );
 //			})->count();
 
-	    $data['lastMonthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->modify( '0:00 first day of last month' ) )
-	                                      ->where( 'schedule_occurrences.start_date', '<=', $today->modify( '23:59:59 last day of last month' ) )
+	    $data['lastMonthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->copy()->modify( '0:00 first day of last month' ) )
+	                                      ->where( 'schedule_occurrences.start_date', '<=', $today->copy()->modify( '23:59:59 last day of last month' ) )
 	                                      ->count();
 
-	    $data['nextMonthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->modify( '0:00 first day of next month' ) )
-	                                      ->where( 'schedule_occurrences.start_date', '<=', $today->modify( '23:59:59 last day of next month' ) )
+	    $data['nextMonthEvent'] = Schedule::withOccurrences()->where( 'schedule_occurrences.start_date', '>=', $today->copy()->modify( '0:00 first day of next month' ) )
+	                                      ->where( 'schedule_occurrences.start_date', '<=', $today->copy()->modify( '23:59:59 last day of next month' ) )
 	                                      ->count();
 
 	    $data['fullMonthEvent'] = Schedule::withOccurrences()->select( DB::raw( "count('id') as total,schedule_occurrences.start_date" ) )
@@ -73,8 +73,8 @@ class SchedulerController extends Controller
 	                                          ->groupBy( DB::raw( "DATE_FORMAT(schedule_occurrences.start_date, '%Y%m')" ) )
 	                                          ->get();
 
-	    $data['reminders'] = ScheduleReminder::with('Schedule','Schedule.occurrences')->where('reminder_date','>=',$today->modify('0:00'))->get();
-	    // laravel 5.3+ $data['reminders'] = ScheduleReminder::whereHas('schedule')->where( 'reminder_date', '>=', $today->modify( '0:00' ) )->get();
+	    $data['reminders'] = ScheduleReminder::with('Schedule','Schedule.occurrences')->where('reminder_date','>=',$today->copy()->modify('0:00'))->get();
+	    // laravel 5.3+ $data['reminders'] = ScheduleReminder::whereHas('schedule')->where( 'reminder_date', '>=', $today->copy()->modify( '0:00' ) )->get();
 
         return view('Scheduler::schedule.dashboard', $data);
     }

@@ -1,7 +1,7 @@
 @extends('Scheduler::partials._master')
 
 @section('content')
-    @if(!config('app.name') == 'Invoice Ninja') {!! Form::breadcrumbs() !!} @endif
+
     <div class="container col-lg-12">
         @if(!($events->isEmpty()))
             <div class="row">
