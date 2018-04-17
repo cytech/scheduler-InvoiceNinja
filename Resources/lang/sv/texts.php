@@ -135,4 +135,12 @@ return [
 	'will_call'                     => 'Client Pickup?',
 	'year_month_report'             => 'Fullständig års individuell månadsrapport',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => "Core Events att visa på kalender",
+    'quote'                         => 'Citat',
+    'invoice'                       => 'Faktura',
+    'payment'                       => 'Betalning',
+    'expense'                       => 'Bekostnad',
+    'project'                       => 'Projekt',
+    'task'                          => 'Uppgift',
 ];

@@ -37,6 +37,12 @@ use DateTimeImmutable;
 //for FusionInvoice
 //use app\Modules\CompanyProfiles\Models\CompanyProfile;
 use Modules\Scheduler\Http\Requests\EventRequest;
+//for coreevents
+use App\Models\Invoice;
+use App\Models\Payment;
+use App\Models\Expense;
+use App\Models\Project;
+use App\Models\Task;
 
 class SchedulerController extends Controller
 {
@@ -96,6 +102,41 @@ class SchedulerController extends Controller
         //$data['companyProfiles'] = CompanyProfile::getList();
 	    //for InvoiceNinja
 	    $data['companyProfiles'] = ['Default'];
+
+	    //retrieve configured coreevents
+        $coreevents = [];
+        $filter = request()->filter ?: (new Setting())->coreeventsEnabled();
+
+        $coredata = [
+            ENTITY_QUOTE => Invoice::scope()->quotes(),
+            ENTITY_INVOICE => Invoice::scope()->invoices(),
+            ENTITY_PAYMENT => Payment::scope()->with(['invoice']),
+            ENTITY_EXPENSE => Expense::scope()->with(['expense_category']),
+            ENTITY_PROJECT => Project::scope(),
+            ENTITY_TASK => Task::scope()->with(['project']),
+        ];
+
+        foreach ($coredata as $type => $source) {
+            if (! count($filter) || in_array($type, $filter)) {
+                $source->where(function($query) use ($type) {
+                    $start = Carbon::now()->subDays(config('schedule_settings.pastdays'));
+                    $end = Carbon::now()->addCentury();//really.....
+                    return $query->dateRange($start, $end);
+                });
+
+                foreach ($source->with(['account', 'client.contacts'])->get() as $entity) {
+                    if ($entity->client && $entity->client->trashed()) {
+                        continue;
+                    }
+
+                    $subColors = count($filter) == 1;
+                    $coreevents[] = $entity->present()->calendarEvent($subColors);
+                    $coreevents[count($coreevents) - 1]->category_id =  (Category::where('name', $type)->value('id'));
+                }
+            }
+        }
+
+        $data['coreevents'] = $coreevents;
 
         return view('Scheduler::schedule.calendar', $data);
     }
@@ -454,7 +495,7 @@ class SchedulerController extends Controller
 		if ( $request->isMethod( 'post' ) ) {
 
 			foreach ( $request->only( 'Pastdays', 'EventLimit', 'CreateWorkorder', 'Version',
-								'FcThemeSystem', 'FcAspectRatio', 'TimeStep' ) as $key => $value ) {
+								'FcThemeSystem', 'FcAspectRatio', 'TimeStep', 'enabledCoreEvents' ) as $key => $value ) {
 				//TODO when workorder module is complete
 				if ( $key == 'CreateWorkorder' && $value == 1 ) {
 					if ( empty( config( 'workorder_settings.version' ) ) ) {
@@ -463,7 +504,12 @@ class SchedulerController extends Controller
 					}
 				}
 				$setting  = Setting::firstOrNew( [ 'setting_key' => $key ] );
-				$setting->setting_value = $value;
+
+				if ($key == 'enabledCoreEvents'){
+                    $setting->setting_value = !empty($request->enabledCoreEvents) ? array_sum($request->enabledCoreEvents) : 0;
+                } else {
+                    $setting->setting_value = $value;
+                }
 				$setting->save();
 			}
 

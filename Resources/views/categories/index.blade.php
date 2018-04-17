@@ -46,7 +46,7 @@
                                         <a class="btn btn-primary iframe"
                                            href="{{ route('scheduler.categories.edit', [$category->id]) }}"><i
                                                     class="fa fa-fw fa-edit"></i>{{ trans('Scheduler::texts.edit') }}</a>
-                                        @if($category->id > 3)
+                                        @if($category->id > 9)
                                             {!! Form::button('<i class="fa fa-fw fa-trash"></i>'.trans('Scheduler::texts.delete'), ['type' => 'button','class' => 'btn btn-danger delete-button', 'data-id'=> $category->id]) !!}
                                         @endif
                                     </td>

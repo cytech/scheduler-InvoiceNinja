@@ -14,6 +14,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label>{{ trans('Scheduler::texts.version') }}</label>
+                            {!! Form::text('Version', config('schedule_settings.version'), ['class' => 'form-control' , 'readonly' => 'true']) !!}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label>{{ trans('Scheduler::texts.past_days') }}</label>
                             {!! Form::text('Pastdays', config('schedule_settings.pastdays'), ['class' => 'form-control']) !!}
                         </div>
@@ -56,8 +64,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>{{ trans('Scheduler::texts.version') }}</label>
-                            {!! Form::text('Version', config('schedule_settings.version'), ['class' => 'form-control' , 'readonly' => 'true']) !!}
+                            <label>{{ trans('Scheduler::texts.coreeventslist') }}</label>
+                            <div class="col-lg-8 col-sm-8">
+                                @foreach (\Modules\Scheduler\Models\Setting::$coreevents as $entityType => $value)
+                                    <div class="checkbox">
+                                        <label for="enabledCoreEvents{{ $value}}">
+                                            <input name="enabledCoreEvents[]" id="enabledCoreEvents{{ $value}}" type="checkbox" {{ (new \Modules\Scheduler\Models\Setting())->isCoreeventEnabled($entityType) ? 'checked="checked"' : '' }} value="{{ $value }}">{{ trans("Scheduler::texts.{$entityType}") }}                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>

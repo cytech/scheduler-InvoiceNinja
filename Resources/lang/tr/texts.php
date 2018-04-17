@@ -137,4 +137,12 @@ return [
 	'will_call'                     => 'Müşteri Alımı?',
 	'year_month_report'             => 'Yıllık Bireysel Aylık Rapor',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Takvim de gösterilecek Temel Etkinlikler',
+    'quote'                         => 'Alıntı',
+    'invoice'                       => 'Fatura',
+    'payment'                       => 'Ödeme',
+    'expense'                       => 'Gider',
+    'project'                       => 'Projesi',
+    'task'                          => 'Görev',
 ];

@@ -135,4 +135,12 @@ return [
 	'will_call'                     => 'Client Pickup?',
 	'year_month_report'             => 'Rapport annuel du mois sur l\'année entière',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Core Events à afficher sur le calendrier',
+    'quote'                         => 'Citation',
+    'invoice'                       => 'Facture d achat',
+    'payment'                       => 'Paiement',
+    'expense'                       => 'Frais',
+    'project'                       => 'Projet',
+    'task'                          => 'Tâche',
 ];

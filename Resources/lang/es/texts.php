@@ -136,4 +136,12 @@ return [
 	'will_call'                     => '¿Recogida del cliente?',
 	'year_month_report'             => 'Informe anual completo del mes',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Eventos principales para mostrar en el calendario',
+    'quote'                         => 'Citar',
+    'invoice'                       => 'Factura',
+    'payment'                       => 'Pago',
+    'expense'                       => 'Gastos',
+    'project'                       => 'Proyecto',
+    'task'                          => 'Tarea',
 ];

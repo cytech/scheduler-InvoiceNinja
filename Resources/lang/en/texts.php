@@ -147,4 +147,12 @@ return [
 	//'update_info'            => 'Update Info',
 	//'updated_schedule'       => 'Successfully updated schedule',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Core Events to show on Calendar',
+    'quote'                         => 'Quote',
+    'invoice'                       => 'Invoice',
+    'payment'                       => 'Payment',
+    'expense'                       => 'Expense',
+    'project'                       => 'Project',
+    'task'                          => 'Task',
 ];

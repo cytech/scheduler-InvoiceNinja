@@ -418,6 +418,25 @@
 
                     },
                     @endforeach
+
+                    // coreevents
+                    @if($coreevents)
+                        @foreach($coreevents as $coreevent){
+                        id: "{!! $coreevent->id !!}",
+                        allDay: true,
+                        url: "{!! $coreevent->url !!}",
+                        title: "{!! $coreevent->title !!}",
+                        description: "{!! addslashes($coreevent->title) !!}",
+                        @if($coreevent->category_id)
+                        color: "{!! $catbglist[$coreevent->category_id] !!}",
+                        textColor: "{!! $cattxlist[$coreevent->category_id] !!}",
+                        @endif
+                        start: "{!! $coreevent->start !!}",
+                    },
+                    @endforeach
+                    @endif
+
+
                 ],
                 // customized fullcalendar.mod.js to allow month view sort by category/start
                 //eventOrder sorts events with same dates/times

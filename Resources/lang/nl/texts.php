@@ -136,4 +136,12 @@ return [
 	'will_call'                     => 'Klantenafhaling?',
 	'year_month_report'             => 'Full Year Individual Month Report',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Kerngebeurtenissen om op agenda weer te geven',
+    'quote'                         => 'Citaat',
+    'invoice'                       => 'Factuur',
+    'payment'                       => 'Betaling',
+    'expense'                       => 'Kosten',
+    'project'                       => 'Project',
+    'task'                          => 'Taak',
 ];
