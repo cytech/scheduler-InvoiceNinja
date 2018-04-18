@@ -7,7 +7,7 @@
             <div class="panel-body">
                 {{--cut and paste doc start--}}
                 <p style="margin-bottom: 0in; line-height: 100%"><font size="4" style="font-size: 16pt"><u><b>Scheduler
-                                Addon for InvoiceNinja v 2.1.0</b></u></font></p>
+                                Addon for InvoiceNinja v 2.1.1</b></u></font></p>
                 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
                 </p>
@@ -150,8 +150,8 @@ installed Scheduler version number.</span></p>
                 <p style="margin-left: 0.75in; margin-bottom: 0in; line-height: 100%; background: transparent">
                     <b>Core Events to show on calendar</b> – Select to enable display
                     of system core events on Scheduler calendar. Shows a selectable link
-                    to the core event. Duw date takes precedence over event date if
-                    availalble.</p>
+                    to the core event. Due date takes precedence over event date if
+                    available.</p>
                 <p style="margin-left: 0.49in; margin-bottom: 0in; line-height: 100%">
                     <br/>
 
@@ -199,6 +199,14 @@ support is provided via email: </span></span></span></font></font></font></span>
                     Cytech Scheduler Addon for InvoiceNinja version 2.1.0</p>
                 <p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
                     Addition of system core event display on calendar</p>
+                <p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+                    <br/>
+
+                </p>
+                <p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+                    Cytech Scheduler Addon for InvoiceNinja version 2.1.1</p>
+                <p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+                    Correct migration for category auto increment</p>
                 <p style="margin-bottom: 0in; line-height: 100%"><br/>
 
                 </p>

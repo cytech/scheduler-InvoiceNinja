@@ -136,4 +136,12 @@ return [
 	'will_call'                     => 'Kundenabholung?',
 	'year_month_report'             => 'Ganzjähriger Bericht zum einzelnen Monat',
 
+    //scheduler 2.1.0
+    'coreeventslist'                => 'Core Events im Kalender anzeigen',
+    'quote'                         => 'Zitat',
+    'invoice'                       => 'Rechnung',
+    'payment'                       => 'Zahlung',
+    'expense'                       => "Aufwand",
+    'project'                       => 'Projekt',
+    'task'                          => 'Aufgabe',
 ];

@@ -33,7 +33,6 @@ use Session;
 use Response;
 use Illuminate\Http\Request;
 
-use DateTimeImmutable;
 //for FusionInvoice
 //use app\Modules\CompanyProfiles\Models\CompanyProfile;
 use Modules\Scheduler\Http\Requests\EventRequest;
