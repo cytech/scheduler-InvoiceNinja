@@ -56,7 +56,7 @@
                         </table>
                         <script>
                             $(function () {
-                            $('.delete-button').click(function () {
+                            $('#dt-categoriestable').on('click','.delete-button',function () {
                                 var id = ($(this).data('id'));
                                 pconfirm_def.text = '{!! trans('Scheduler::texts.delete_warning') !!}';
                                 new PNotify(pconfirm_def).get().on('pnotify.confirm', function () {
