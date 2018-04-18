@@ -38,12 +38,6 @@ class UpdateScheduleCategoriesTable extends Migration
             $scats->save();
         }
 
-        //set autoincrement to max(id) +1
-        $autoinc = Category::max('id') + 1;
-        DB::statement("ALTER TABLE `ninja-dev`.`schedule_categories` AUTO_INCREMENT = $autoinc") ;
-
-
-
 	    DB::table('schedule_categories')->insert(array('id'=> 4,'name' => 'Quote','text_color' => '#ffffff','bg_color' => '#716cb1'));
         DB::table('schedule_categories')->insert(array('id'=> 5,'name' => 'Invoice','text_color' => '#ffffff','bg_color' => '#377eb8'));
         DB::table('schedule_categories')->insert(array('id'=> 6,'name' => 'Payment','text_color' => '#ffffff','bg_color' => '#5fa213'));
