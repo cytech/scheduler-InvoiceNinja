@@ -1,7 +1,7 @@
 {
     "name": "cytech/scheduler",
     "description": "A module for InvoiceNinja for scheduling events via FullCalendar",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "type": "invoiceninja-module",
     "keywords": ["schedule", "fullcalendar", "invoiceninja"],
     "homepage": "http://cytech-eng.com",
