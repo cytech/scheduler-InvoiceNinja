@@ -493,7 +493,12 @@ class SchedulerController extends Controller
 	public function Settings( Request $request ) {
 		if ( $request->isMethod( 'post' ) ) {
 
-			foreach ( $request->only( 'Pastdays', 'EventLimit', 'CreateWorkorder', 'Version',
+            //check if no enableCoreEvent checkboxes checked
+            if(! $request->has('enabledCoreEvents')){
+                $request['enabledCoreEvents'] = [0];
+            };
+
+            foreach ( $request->only( 'Pastdays', 'EventLimit', 'CreateWorkorder', 'Version',
 								'FcThemeSystem', 'FcAspectRatio', 'TimeStep', 'enabledCoreEvents' ) as $key => $value ) {
 				//TODO when workorder module is complete
 				if ( $key == 'CreateWorkorder' && $value == 1 ) {
@@ -505,7 +510,7 @@ class SchedulerController extends Controller
 				$setting  = Setting::firstOrNew( [ 'setting_key' => $key ] );
 
 				if ($key == 'enabledCoreEvents'){
-                    $setting->setting_value = !empty($request->enabledCoreEvents) ? array_sum($request->enabledCoreEvents) : 0;
+                    $setting->setting_value = array_sum($request->enabledCoreEvents);
                 } else {
                     $setting->setting_value = $value;
                 }
